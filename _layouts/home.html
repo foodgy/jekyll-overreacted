@@ -1,0 +1,33 @@
+---
+layout: base
+---
+{%- include header.html -%}
+<main>
+  <div class="flex flex-col gap-8 bg-clip-text text-transparent bg-gradient-to-b from-pink-500 dark:from-pink-300 from-0% to-fuchsia-800 dark:to-violet-300 to-75%">
+    {%- if site.posts.size > 0 -%}
+    {%- if site.paginate -%}
+      {%- assign posts = paginator.posts -%}
+    {%- else -%}
+      {%- assign posts = site.posts -%}
+    {%- endif -%}
+    {%- for post in posts -%}
+    <article>
+      <a class="block py-4" href="{{ post.url | absolute_url }}">
+        <h2 class="font-sans font-black text-[28px]">
+          {{- post.title -}}
+        </h2>
+        <p class="text-[13px] text-gray-700 dark:text-gray-300">
+          {{ post.date | date: '%B %-d, %Y' }}
+        </p>
+        <p class="mt-1 text-zinc-800 dark:text-white">
+          {{- post.description -}}
+        </p>
+      </a>
+    </article>
+    {%- endfor -%}
+    {%- endif -%}
+  </div>
+  {%- if site.paginate and site.posts.size >= site.paginate -%}
+    {%- include pagination.html -%}
+  {%- endif -%}
+</main>

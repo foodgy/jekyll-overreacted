@@ -1,0 +1,43 @@
+# Jekyll - Overreacted Theme
+
+title: overreacted
+author:
+  name: GitHub User
+  logo: "/assets/img/logo.jpeg"
+  email: your-email@domain.com
+
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Write an awesome description for your new site here. You can edit this line
+  in _config.yml. It will appear in your document head meta (for Google search
+  results) and in your feed.xml site description.
+
+# Enter your Google Tag Manager container ID (e.g. GTM-MD35N24).
+google_tag_manager: false
+
+# Pagination
+paginate: 10
+paginate_path: /page-:num/
+
+# Generate social links in footer.
+social_links:
+  - { platform: facebook, title: "", user_url: "https://www.facebook.com/jekyll" }
+  - { platform: github, title: "", user_url: "https://github.com/foodgy" }
+#  - { platform: instagram, title: "", user_url: "https://www.instagram.com/jekyll" }
+  - { platform: linkedin, title: "", user_url: "https://www.linkedin.com/in/jekyll" }
+#  - { platform: telegram, title: "", user_url: "https://t.me/jekyll" }
+  - { platform: twitter, title: "", user_url: "https://x.com/jekyllrb" }
+#  - { platform: youtube, title: "", user_url: "https://www.youtube.com/jekyll" }
+
+# You don't need to change any of the configuration flags below.
+
+sass:
+  style: :compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jemoji
+  

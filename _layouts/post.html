@@ -1,0 +1,18 @@
+---
+layout: base
+---
+{%- include header.html -%}
+<main>
+  <article>
+    <h1 class="font-sans font-black text-[40px] leading-[44px] dark:text-white">
+      {{- page.title -}}
+    </h1>
+    <p class="mt-2 text-[13px] text-gray-700 dark:text-gray-300">
+      {{ page.date | date: '%B %-d, %Y' }}
+    </p>
+    <div class="markdown mt-10">
+      {{ content }}
+    </div>
+  </article>
+  {%- include footer.html -%}
+</main>

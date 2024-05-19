@@ -1,0 +1,19 @@
+<footer>
+  <hr class="mt-4 mb-8 opacity-60 dark:opacity-10">
+  <nav class="flex flex-row place-content-between mt-14">
+    {%- if paginator.previous_page -%}
+    <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ paginator.previous_page_path }}">
+      &#8592; Prev
+    </a>
+    {%- else -%}
+    <span class="text-gray-700 dark:text-gray-300">&#8592; Prev</span>
+    {%- endif -%}
+    {%- if paginator.next_page -%}
+    <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ paginator.next_page_path }}">
+      Next &#8594;
+    </a>
+    {%- else -%}
+    <span class="text-gray-700 dark:text-gray-300">Next &#8594;</span>
+    {%- endif -%}
+  </nav>
+</footer>

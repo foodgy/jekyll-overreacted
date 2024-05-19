@@ -1,0 +1,19 @@
+<header class="flex flex-row place-content-between mb-14">
+    {%- if page.layout == 'home' -%}
+    <h1 class="font-sans font-black text-2xl dark:text-white">
+        {{- site.title -}}
+    </h1>
+    {%- else -%}
+    <a class="inline-block text-2xl font-sans font-black" href="{{ '/' | relative_url }}">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800 dark:from-pink-300 dark:to-violet-300">
+            {{- site.title -}}
+        </span>
+    </a>
+    {%- endif -%}
+    <span class="relative top-[4px] italic">
+        by&nbsp;
+        <a href="{{ '/' | relative_url }}about/">
+            <img class="relative -top-1 mx-1 inline h-8 w-8 rounded-full" src="{{ site.author.logo }}" alt="{{ site.author.name }}">
+        </a>
+    </span>
+</header>

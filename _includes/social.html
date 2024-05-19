@@ -1,0 +1,14 @@
+<ul class="flex">
+    <li class="flex ml-auto order-1">
+        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+            rss
+        </a>
+    </li>
+    {%- for entry in site.social_links -%}
+    <li class="flex after:content-['\00a0\00a0\2022\00a0\00a0'] last:after:content-['']">
+        <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" title="{{ entry.title | default: entry.platform }}" target="_blank" rel="me" href="{{ entry.user_url }}">
+            {{- entry.title | default: entry.platform -}}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>

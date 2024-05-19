@@ -1,0 +1,29 @@
+<footer>
+    <hr class="pt-8 opacity-60 dark:opacity-10">
+    {%- include social.html -%}
+    <div class="mt-14 flex flex-row place-content-between">
+        <a class="inline-block text-2xl font-sans font-black" href="{{ '/' | relative_url }}">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-purple-800 dark:from-pink-300 dark:to-violet-300">
+                {{- site.title -}}
+            </span>
+        </a>
+    </div>
+    <nav>
+        <ul class="flex mt-14">
+            {%- if page.previous.url -%}
+            <li class="mr-auto">
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.previous.url}}">
+                    &#8592; {{page.previous.title}}
+                </a>
+            </li>
+            {%- endif -%}
+            {%- if page.next.url -%}
+            <li class="ml-auto">
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.next.url}}">
+                    {{page.next.title}} &#8594;
+                </a>
+            </li>
+            {%- endif -%}
+        </ul>
+    </nav>
+</footer>

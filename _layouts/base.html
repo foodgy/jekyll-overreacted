@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html class="font-serif" lang="ru">
+  {%- include head.html -%}
+  <body class="mx-auto max-w-2xl px-5 py-12 bg-white text-zinc-800 dark:text-white dark:bg-[--bg-color]">
+    {%- if site.tools.gtm -%}
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtm }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {%- endif -%}
+    {{ content }}
+  </body>
+</html>

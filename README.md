@@ -1,11 +1,13 @@
 
+[![Jekyll Themes Shield](https://img.shields.io/badge/featured%20on-JT-red.svg)](https://jekyll-themes.com/foodgy/jekyll-overreacted)
+
 # Overreacted Theme
 
 [Overreacted](https://github.com/foodgy/jekyll-overreacted) is a theme for [Jekyll](http://jekyllrb.com), the static site generator. It's inspired by [Dan Abramov's](https://overreacted.io/) blog design.
 
 <div align="center">
-  <p><a href="https://romakoch.com">Theme preview</a></p>
-  <p><img src="/screenshot.png"/></p>
+  <h3><a href="https://romakoch.com">Theme preview</a></h3>
+  <p><img src="https://raw.githubusercontent.com/foodgy/jekyll-overreacted/main/screenshot.png"/></p>
 </div>
 
 ## Features

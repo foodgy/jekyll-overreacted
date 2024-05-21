@@ -9,21 +9,21 @@
         </a>
     </div>
     <nav>
-        <ul class="flex mt-14">
+        <ul class="flex flex-wrap place-content-between mt-14">
+            <li class="mb-3.5 mr-5">
             {%- if page.previous.url -%}
-            <li class="mr-auto">
-                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.previous.url}}">
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.previous.url}}" rel="prev">
                     &#8592; {{page.previous.title}}
                 </a>
-            </li>
             {%- endif -%}
+            </li>
+            <li class="mb-3.5"></li>
             {%- if page.next.url -%}
-            <li class="ml-auto">
-                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.next.url}}">
+                <a class="text-pink-500 dark:text-pink-300 border-b border-pink-500 dark:border-pink-300 hover:border-0" href="{{page.next.url}}" rel="next">
                     {{page.next.title}} &#8594;
                 </a>
-            </li>
             {%- endif -%}
+            </li>
         </ul>
     </nav>
 </footer>
